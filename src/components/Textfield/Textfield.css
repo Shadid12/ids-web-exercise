@@ -53,6 +53,7 @@
   
 .text-field-container.warning .text-field-input {
     border-color: #f57c00;
+    background: #f6e4d2;
 }
   
 .text-field-container.warning .text-field-input:focus {

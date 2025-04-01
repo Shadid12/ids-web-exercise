@@ -34,4 +34,22 @@ export default defineConfig({
     emptyOutDir: true,
     cssCodeSplit: true,
   },
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: ['./src/setupTests.ts'],
+    // Add CSS handling for tests
+    css: {
+      modules: {
+        classNameStrategy: 'non-scoped'
+      }
+    },
+    // Exclude stories from tests
+    exclude: [
+      '**/node_modules/**',
+      '**/dist/**',
+      '**/stories/**',
+      '**/*.stories.tsx'
+    ]
+  }
 });
