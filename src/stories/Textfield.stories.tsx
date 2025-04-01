@@ -90,6 +90,17 @@ export const WithWarning: Story = {
   }
 };
 
+// other warning state
+export const Warning: Story = {
+  render: (args) => <ControlledTemplate {...args} />,
+  args: {
+    label: 'Location',
+    placeholder: 'Your location',
+    type: 'text',
+    warning: '⚠️ Please provide a valid location',
+  }
+};
+
 // Different input types
 export const InputTypes = () => {
   interface Values {
