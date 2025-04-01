@@ -59,7 +59,7 @@
 }
 
 .text-field-container.warning .text-field-input:focus {
-    box-shadow: 0 0 0 var(--tf-size-shadow-width) var(--tf-color-shadow-warning);
+box-shadow: 0 0 0 var(--tf-size-shadow-width) var(--tf-color-shadow-warning);
 }
   
 /* Message styling */
