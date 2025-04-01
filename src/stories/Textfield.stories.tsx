@@ -149,14 +149,6 @@ export const InputTypes = () => {
         value={values.number}
         onChange={(e) => handleChange('number', e.target.value)}
       />
-      
-      <Textfield 
-        label="Telephone Input"
-        placeholder="Enter phone number"
-        type="tel"
-        value={values.tel}
-        onChange={(e) => handleChange('tel', e.target.value)}
-      />
     </div>
   );
 };
@@ -192,3 +184,75 @@ export const LayoutComparison = () => (
     </div>
   </div>
 );
+
+
+export const ThemeToggleDemo = () => {
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  
+  // Toggle between light and dark themes
+  const toggleTheme = () => {
+    setIsDarkTheme(!isDarkTheme);
+  };
+  
+  // Example form with multiple textfields
+  return (
+    <div className={isDarkTheme ? 'dark-theme' : ''} style={{
+      padding: '20px',
+      borderRadius: '8px',
+      backgroundColor: isDarkTheme ? 'var(--tf-color-background-main-dark)' : 'var(--tf-color-background-surface-light)',
+      transition: 'background-color 0.3s ease',
+      maxWidth: '500px'
+    }}>
+      <div style={{ marginBottom: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <h3 style={{ 
+          color: isDarkTheme ? 'var(--tf-color-text-default-dark)' : 'var(--tf-color-text-default-light)',
+          margin: 0
+        }}>
+          {isDarkTheme ? 'Dark Theme' : 'Light Theme'}
+        </h3>
+        
+        <button 
+          onClick={toggleTheme}
+          style={{
+            padding: '8px 16px',
+            backgroundColor: isDarkTheme ? '#e0e0e0' : '#333',
+            color: isDarkTheme ? '#121212' : 'white',
+            border: 'none',
+            borderRadius: '4px',
+            cursor: 'pointer',
+            fontWeight: 500
+          }}
+        >
+          Switch to {isDarkTheme ? 'Light' : 'Dark'} Theme
+        </button>
+      </div>
+      
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+        <Textfield 
+          label="Username"
+          placeholder="Enter your username"
+          required={true}
+        />
+        
+        <Textfield 
+          label="Email"
+          placeholder="Enter your email"
+          type="email"
+        />
+        
+        <Textfield 
+          label="Password"
+          placeholder="Enter your password"
+          type="password"
+          warning="Password should be at least 8 characters"
+        />
+        
+        <Textfield 
+          label="Confirmation Code"
+          placeholder="Enter the code"
+          error="Invalid code format"
+        />
+      </div>
+    </div>
+  );
+};

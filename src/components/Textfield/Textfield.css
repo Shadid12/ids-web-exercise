@@ -1,78 +1,178 @@
 @import '../../../build/css/variables.css';
 
+/* 
+  Default = light theme
+  Dark theme is applied when:
+  - .dark-theme class is on a parent element
+  - body.dark-theme exists in the document
+  - html.dark-theme exists in the document
+*/
+
 .text-field-container {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: var(--tf-size-spacing-container);
-    width: var(--tf-size-component-textField-width);
-    max-width: var(--tf-size-component-textField-maxWidth);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--tf-size-spacing-container);
+  width: var(--tf-size-component-textField-width);
+  max-width: var(--tf-size-component-textField-maxWidth);
 }
-  
+
 .text-field-label {
-    font-size: var(--tf-size-font-label);
-    margin-bottom: var(--tf-size-spacing-label);
-    font-weight: var(--tf-font-weight-label);
-    color: var(--tf-color-text-default);
+  font-size: var(--tf-size-font-label);
+  margin-bottom: var(--tf-size-spacing-label);
+  font-weight: var(--tf-font-weight-label);
+  color: var(--tf-color-text-default-light);
 }
-  
+
 .required-mark {
-    color: var(--tf-color-text-error);
-    margin-left: var(--tf-size-spacing-requiredMark);
+  color: var(--tf-color-text-error-light);
+  margin-left: var(--tf-size-spacing-requiredMark);
 }
-  
+
 .text-field-input {
-    padding: var(--tf-size-spacing-input-paddingVertical) var(--tf-size-spacing-input-paddingHorizontal);
-    font-size: var(--tf-size-font-input);
-    border: var(--tf-size-borderWidth-input) solid var(--tf-color-border-default);
-    border-radius: var(--tf-size-borderRadius-input);
-    outline: none;
-    transition: all var(--tf-animation-duration-transition) var(--tf-animation-easing-default);
+  padding: var(--tf-size-spacing-input-paddingVertical) var(--tf-size-spacing-input-paddingHorizontal);
+  font-size: var(--tf-size-font-input);
+  border: var(--tf-size-borderWidth-input) solid var(--tf-color-border-default-light);
+  border-radius: var(--tf-size-borderRadius-input);
+  outline: none;
+  transition: all var(--tf-animation-duration-transition) var(--tf-animation-easing-default);
+  background-color: var(--tf-color-background-surface-light);
+  color: var(--tf-color-text-default-light);
 }
-  
+
 .text-field-input:focus {
-    border-color: var(--tf-color-border-focus);
-    box-shadow: 0 0 0 var(--tf-size-shadow-width) var(--tf-color-shadow-focus);
+  border-color: var(--tf-color-border-focus-light);
+  box-shadow: 0 0 0 var(--tf-size-shadow-width) var(--tf-color-shadow-focus-light);
 }
-  
+
 /* Error state */
 .text-field-container.error .text-field-label {
-    color: var(--tf-color-text-error);
+  color: var(--tf-color-text-error-light);
 }
-  
+
 .text-field-container.error .text-field-input {
-    border-color: var(--tf-color-border-error);
-    background: var(--tf-color-background-error);
+  border-color: var(--tf-color-border-error-light);
+  background: var(--tf-color-background-error-light);
 }
-  
+
 .text-field-container.error .text-field-input:focus {
-    box-shadow: 0 0 0 var(--tf-size-shadow-width) var(--tf-color-shadow-error);
+  box-shadow: 0 0 0 var(--tf-size-shadow-width) var(--tf-color-shadow-error-light);
 }
 
 /* Warning state */
 .text-field-container.warning .text-field-label {
-    color: var(--tf-color-text-warning);
+  color: var(--tf-color-text-warning-light);
 }
 
 .text-field-container.warning .text-field-input {
-    border-color: var(--tf-color-border-warning);
-    background: var(--tf-color-background-warning);
+  border-color: var(--tf-color-border-warning-light);
+  background: var(--tf-color-background-warning-light);
 }
 
 .text-field-container.warning .text-field-input:focus {
-box-shadow: 0 0 0 var(--tf-size-shadow-width) var(--tf-color-shadow-warning);
+  box-shadow: 0 0 0 var(--tf-size-shadow-width) var(--tf-color-shadow-warning-light);
 }
-  
+
 /* Message styling */
 .message {
-    font-size: var(--tf-size-font-message);
-    margin-top: var(--tf-size-spacing-message);
-    line-height: var(--tf-font-lineHeight-message);
+  font-size: var(--tf-size-font-message);
+  margin-top: var(--tf-size-spacing-message);
+  line-height: var(--tf-font-lineHeight-message);
 }
 
 .error-message {
-    color: var(--tf-color-text-error);
+  color: var(--tf-color-text-error-light);
 }
-  
+
 .warning-message {
-    color: var(--tf-color-text-warning);
+  color: var(--tf-color-text-warning-light);
+}
+
+/* Dark theme styles - multiple selectors for flexibility */
+html.dark-theme .text-field-label,
+body.dark-theme .text-field-label,
+.dark-theme .text-field-label {
+  color: var(--tf-color-text-default-dark);
+}
+
+html.dark-theme .required-mark,
+body.dark-theme .required-mark,
+.dark-theme .required-mark {
+  color: var(--tf-color-text-error-dark);
+}
+
+html.dark-theme .text-field-input,
+body.dark-theme .text-field-input,
+.dark-theme .text-field-input {
+  border-color: var(--tf-color-border-default-dark);
+  background-color: var(--tf-color-background-surface-dark);
+  color: var(--tf-color-text-default-dark);
+}
+
+html.dark-theme .text-field-input:focus,
+body.dark-theme .text-field-input:focus,
+.dark-theme .text-field-input:focus {
+  border-color: var(--tf-color-border-focus-dark);
+  box-shadow: 0 0 0 var(--tf-size-shadow-width) var(--tf-color-shadow-focus-dark);
+}
+
+/* Error state - dark theme */
+html.dark-theme .text-field-container.error .text-field-label,
+body.dark-theme .text-field-container.error .text-field-label,
+.dark-theme .text-field-container.error .text-field-label {
+  color: var(--tf-color-text-error-dark);
+}
+
+html.dark-theme .text-field-container.error .text-field-input,
+body.dark-theme .text-field-container.error .text-field-input,
+.dark-theme .text-field-container.error .text-field-input {
+  border-color: var(--tf-color-border-error-dark);
+  background: var(--tf-color-background-error-dark);
+}
+
+html.dark-theme .text-field-container.error .text-field-input:focus,
+body.dark-theme .text-field-container.error .text-field-input:focus,
+.dark-theme .text-field-container.error .text-field-input:focus {
+  box-shadow: 0 0 0 var(--tf-size-shadow-width) var(--tf-color-shadow-error-dark);
+}
+
+/* Warning state - dark theme */
+html.dark-theme .text-field-container.warning .text-field-label,
+body.dark-theme .text-field-container.warning .text-field-label,
+.dark-theme .text-field-container.warning .text-field-label {
+  color: var(--tf-color-text-warning-dark);
+}
+
+html.dark-theme .text-field-container.warning .text-field-input,
+body.dark-theme .text-field-container.warning .text-field-input,
+.dark-theme .text-field-container.warning .text-field-input {
+  border-color: var(--tf-color-border-warning-dark);
+  background: var(--tf-color-background-warning-dark);
+}
+
+html.dark-theme .text-field-container.warning .text-field-input:focus,
+body.dark-theme .text-field-container.warning .text-field-input:focus,
+.dark-theme .text-field-container.warning .text-field-input:focus {
+  box-shadow: 0 0 0 var(--tf-size-shadow-width) var(--tf-color-shadow-warning-dark);
+}
+
+/* Message styling - dark theme */
+html.dark-theme .error-message,
+body.dark-theme .error-message,
+.dark-theme .error-message {
+  color: var(--tf-color-text-error-dark);
+}
+
+html.dark-theme .warning-message,
+body.dark-theme .warning-message,
+.dark-theme .warning-message {
+  color: var(--tf-color-text-warning-dark);
+}
+
+/* Also support Storybook's darkMode selector for testing */
+.sb-show-main.sb-dark-theme .text-field-label {
+  color: var(--tf-color-text-default-dark);
+}
+
+.sb-show-main.sb-dark-theme .required-mark {
+  color: var(--tf-color-text-error-dark);
 }

@@ -1,24 +1,68 @@
 {
     "color": {
       "text": {
-        "default": { "value": "#333" },
-        "error": { "value": "#d32f2f" },
-        "warning": { "value": "#f57c00" }
+        "default": { 
+          "light": { "value": "#333" },
+          "dark": { "value": "#e0e0e0" }
+        },
+        "error": { 
+          "light": { "value": "#d32f2f" },
+          "dark": { "value": "#ff5252" }
+        },
+        "warning": { 
+          "light": { "value": "#f57c00" },
+          "dark": { "value": "#ffab40" }
+        }
       },
       "border": {
-        "default": { "value": "#ccc" },
-        "focus": { "value": "#2196f3" },
-        "error": { "value": "#d32f2f" },
-        "warning": { "value": "#f57c00" }
+        "default": { 
+          "light": { "value": "#ccc" },
+          "dark": { "value": "#555" }
+        },
+        "focus": { 
+          "light": { "value": "#2196f3" },
+          "dark": { "value": "#64b5f6" }
+        },
+        "error": { 
+          "light": { "value": "#d32f2f" },
+          "dark": { "value": "#ff5252" }
+        },
+        "warning": { 
+          "light": { "value": "#f57c00" },
+          "dark": { "value": "#ffab40" }
+        }
       },
       "background": {
-        "error": { "value": "#fae4e4" },
-        "warning": { "value": "#f6e4d2" }
+        "main": {
+          "light": { "value": "#ffffff" },
+          "dark": { "value": "#121212" }
+        },
+        "surface": {
+          "light": { "value": "#f5f5f5" },
+          "dark": { "value": "#1e1e1e" }
+        },
+        "error": { 
+          "light": { "value": "#fae4e4" },
+          "dark": { "value": "#441818" }
+        },
+        "warning": { 
+          "light": { "value": "#f6e4d2" },
+          "dark": { "value": "#442b18" }
+        }
       },
       "shadow": {
-        "focus": { "value": "rgba(33, 150, 243, 0.2)" },
-        "error": { "value": "rgba(211, 47, 47, 0.2)" },
-        "warning": { "value": "rgba(245, 124, 0, 0.2)" }
+        "focus": { 
+          "light": { "value": "rgba(33, 150, 243, 0.2)" },
+          "dark": { "value": "rgba(100, 181, 246, 0.25)" }
+        },
+        "error": { 
+          "light": { "value": "rgba(211, 47, 47, 0.2)" },
+          "dark": { "value": "rgba(255, 82, 82, 0.25)" }
+        },
+        "warning": { 
+          "light": { "value": "rgba(245, 124, 0, 0.2)" },
+          "dark": { "value": "rgba(255, 171, 64, 0.25)" }
+        }
       }
     },
     "size": {

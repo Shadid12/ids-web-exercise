@@ -3,18 +3,34 @@
  * Do not edit directly
  */
 :root {
-  --tf-color-text-default: #333;
-  --tf-color-text-error: #d32f2f;
-  --tf-color-text-warning: #f57c00;
-  --tf-color-border-default: #ccc;
-  --tf-color-border-focus: #2196f3;
-  --tf-color-border-error: #d32f2f;
-  --tf-color-border-warning: #f57c00;
-  --tf-color-background-error: #fae4e4;
-  --tf-color-background-warning: #f6e4d2;
-  --tf-color-shadow-focus: rgba(33, 150, 243, 0.2);
-  --tf-color-shadow-error: rgba(211, 47, 47, 0.2);
-  --tf-color-shadow-warning: rgba(245, 124, 0, 0.2);
+  --tf-color-text-default-light: #333;
+  --tf-color-text-default-dark: #e0e0e0;
+  --tf-color-text-error-light: #d32f2f;
+  --tf-color-text-error-dark: #ff5252;
+  --tf-color-text-warning-light: #f57c00;
+  --tf-color-text-warning-dark: #ffab40;
+  --tf-color-border-default-light: #ccc;
+  --tf-color-border-default-dark: #555;
+  --tf-color-border-focus-light: #2196f3;
+  --tf-color-border-focus-dark: #64b5f6;
+  --tf-color-border-error-light: #d32f2f;
+  --tf-color-border-error-dark: #ff5252;
+  --tf-color-border-warning-light: #f57c00;
+  --tf-color-border-warning-dark: #ffab40;
+  --tf-color-background-main-light: #ffffff;
+  --tf-color-background-main-dark: #121212;
+  --tf-color-background-surface-light: #f5f5f5;
+  --tf-color-background-surface-dark: #1e1e1e;
+  --tf-color-background-error-light: #fae4e4;
+  --tf-color-background-error-dark: #441818;
+  --tf-color-background-warning-light: #f6e4d2;
+  --tf-color-background-warning-dark: #442b18;
+  --tf-color-shadow-focus-light: rgba(33, 150, 243, 0.2);
+  --tf-color-shadow-focus-dark: rgba(100, 181, 246, 0.25);
+  --tf-color-shadow-error-light: rgba(211, 47, 47, 0.2);
+  --tf-color-shadow-error-dark: rgba(255, 82, 82, 0.25);
+  --tf-color-shadow-warning-light: rgba(245, 124, 0, 0.2);
+  --tf-color-shadow-warning-dark: rgba(255, 171, 64, 0.25);
   --tf-size-font-label: 14px;
   --tf-size-font-input: 16px;
   --tf-size-font-message: 14px;
