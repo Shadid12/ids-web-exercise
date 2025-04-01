@@ -1,0 +1,72 @@
+{
+    "color": {
+      "text": {
+        "default": { "value": "#333" },
+        "error": { "value": "#d32f2f" },
+        "warning": { "value": "#f57c00" }
+      },
+      "border": {
+        "default": { "value": "#ccc" },
+        "focus": { "value": "#2196f3" },
+        "error": { "value": "#d32f2f" },
+        "warning": { "value": "#f57c00" }
+      },
+      "background": {
+        "error": { "value": "#fae4e4" },
+        "warning": { "value": "#f6e4d2" }
+      },
+      "shadow": {
+        "focus": { "value": "rgba(33, 150, 243, 0.2)" },
+        "error": { "value": "rgba(211, 47, 47, 0.2)" },
+        "warning": { "value": "rgba(245, 124, 0, 0.2)" }
+      }
+    },
+    "size": {
+      "font": {
+        "label": { "value": "14px" },
+        "input": { "value": "16px" },
+        "message": { "value": "14px" }
+      },
+      "spacing": {
+        "container": { "value": "20px" },
+        "label": { "value": "6px" },
+        "input": {
+          "paddingVertical": { "value": "10px" },
+          "paddingHorizontal": { "value": "12px" }
+        },
+        "message": { "value": "4px" },
+        "requiredMark": { "value": "2px" }
+      },
+      "borderRadius": {
+        "input": { "value": "4px" }
+      },
+      "borderWidth": {
+        "input": { "value": "1px" }
+      },
+      "shadow": {
+        "width": { "value": "2px" }
+      },
+      "component": {
+        "textField": {
+          "width": { "value": "100%" },
+          "maxWidth": { "value": "300px" }
+        }
+      }
+    },
+    "font": {
+      "weight": {
+        "label": { "value": "500" }
+      },
+      "lineHeight": {
+        "message": { "value": "1.4" }
+      }
+    },
+    "animation": {
+      "duration": {
+        "transition": { "value": "0.2s" }
+      },
+      "easing": {
+        "default": { "value": "ease" }
+      }
+    }
+  }

@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build-tokens": "style-dictionary build --config style-dictionary.config.cjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
@@ -66,6 +67,7 @@
     "path": "^0.12.7",
     "rollup-plugin-dts": "^6.2.1",
     "storybook": "^8.6.11",
+    "style-dictionary": "^3.8.0",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0",

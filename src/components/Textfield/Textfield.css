@@ -1,76 +1,78 @@
+@import '../../../build/css/variables.css';
+
 .text-field-container {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
-    width: 100%;
-    max-width: 300px;
+    margin-bottom: var(--tf-size-spacing-container);
+    width: var(--tf-size-component-textField-width);
+    max-width: var(--tf-size-component-textField-maxWidth);
 }
   
 .text-field-label {
-    font-size: 14px;
-    margin-bottom: 6px;
-    font-weight: 500;
-    color: #333;
+    font-size: var(--tf-size-font-label);
+    margin-bottom: var(--tf-size-spacing-label);
+    font-weight: var(--tf-font-weight-label);
+    color: var(--tf-color-text-default);
 }
   
 .required-mark {
-    color: #d32f2f;
-    margin-left: 2px;
+    color: var(--tf-color-text-error);
+    margin-left: var(--tf-size-spacing-requiredMark);
 }
   
 .text-field-input {
-    padding: 10px 12px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: var(--tf-size-spacing-input-paddingVertical) var(--tf-size-spacing-input-paddingHorizontal);
+    font-size: var(--tf-size-font-input);
+    border: var(--tf-size-borderWidth-input) solid var(--tf-color-border-default);
+    border-radius: var(--tf-size-borderRadius-input);
     outline: none;
-    transition: all 0.2s ease;
+    transition: all var(--tf-animation-duration-transition) var(--tf-animation-easing-default);
 }
   
 .text-field-input:focus {
-    border-color: #2196f3;
-    box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
+    border-color: var(--tf-color-border-focus);
+    box-shadow: 0 0 0 var(--tf-size-shadow-width) var(--tf-color-shadow-focus);
 }
   
 /* Error state */
 .text-field-container.error .text-field-label {
-    color: #d32f2f;
+    color: var(--tf-color-text-error);
 }
   
 .text-field-container.error .text-field-input {
-    border-color: #d32f2f;
-    background: #fae4e4;
+    border-color: var(--tf-color-border-error);
+    background: var(--tf-color-background-error);
 }
   
 .text-field-container.error .text-field-input:focus {
-    box-shadow: 0 0 0 2px rgba(211, 47, 47, 0.2);
+    box-shadow: 0 0 0 var(--tf-size-shadow-width) var(--tf-color-shadow-error);
 }
-  
+
 /* Warning state */
 .text-field-container.warning .text-field-label {
-    color: #f57c00;
+    color: var(--tf-color-text-warning);
 }
-  
+
 .text-field-container.warning .text-field-input {
-    border-color: #f57c00;
-    background: #f6e4d2;
+    border-color: var(--tf-color-border-warning);
+    background: var(--tf-color-background-warning);
 }
-  
+
 .text-field-container.warning .text-field-input:focus {
-    box-shadow: 0 0 0 2px rgba(245, 124, 0, 0.2);
+    box-shadow: 0 0 0 var(--tf-size-shadow-width) var(--tf-color-shadow-warning);
 }
   
-  /* Message styling */
+/* Message styling */
 .message {
-    font-size: 14px;
-    margin-top: 4px;
-    line-height: 1.4;
+    font-size: var(--tf-size-font-message);
+    margin-top: var(--tf-size-spacing-message);
+    line-height: var(--tf-font-lineHeight-message);
 }
 
 .error-message {
-    color: #d32f2f;
+    color: var(--tf-color-text-error);
 }
   
 .warning-message {
-    color: #f57c00;
+    color: var(--tf-color-text-warning);
 }

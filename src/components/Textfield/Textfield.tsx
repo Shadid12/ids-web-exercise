@@ -1,5 +1,5 @@
 import React, { useState, ChangeEvent } from 'react';
-import './Textfield.css'; // Make sure to create this CSS file
+import './Textfield.css';
 
 export type TextFieldProps = {
   label?: string;

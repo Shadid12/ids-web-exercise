@@ -1,0 +1,36 @@
+/**
+ * Generated CSS Variables
+ * Do not edit directly
+ */
+:root {
+  --tf-color-text-default: #333;
+  --tf-color-text-error: #d32f2f;
+  --tf-color-text-warning: #f57c00;
+  --tf-color-border-default: #ccc;
+  --tf-color-border-focus: #2196f3;
+  --tf-color-border-error: #d32f2f;
+  --tf-color-border-warning: #f57c00;
+  --tf-color-background-error: #fae4e4;
+  --tf-color-background-warning: #f6e4d2;
+  --tf-color-shadow-focus: rgba(33, 150, 243, 0.2);
+  --tf-color-shadow-error: rgba(211, 47, 47, 0.2);
+  --tf-color-shadow-warning: rgba(245, 124, 0, 0.2);
+  --tf-size-font-label: 14px;
+  --tf-size-font-input: 16px;
+  --tf-size-font-message: 14px;
+  --tf-size-spacing-container: 20px;
+  --tf-size-spacing-label: 6px;
+  --tf-size-spacing-input-paddingVertical: 10px;
+  --tf-size-spacing-input-paddingHorizontal: 12px;
+  --tf-size-spacing-message: 4px;
+  --tf-size-spacing-requiredMark: 2px;
+  --tf-size-borderRadius-input: 4px;
+  --tf-size-borderWidth-input: 1px;
+  --tf-size-shadow-width: 2px;
+  --tf-size-component-textField-width: 100%;
+  --tf-size-component-textField-maxWidth: 300px;
+  --tf-font-weight-label: 500;
+  --tf-font-lineHeight-message: 1.4;
+  --tf-animation-duration-transition: 0.2s;
+  --tf-animation-easing-default: ease;
+}
