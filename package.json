@@ -10,8 +10,28 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "vite-plugin-libcss": "^1.1.1"
+  },
+  "module": "./dist/my-component-library.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/my-component-library.es.js",
+      "require": "./dist/my-component-library.umd.js",
+      "default": "./dist/my-component-library.es.js"
+    },
+    "./Textfield": {
+      "import": "./dist/components/Textfield/index.js",
+      "types": "./dist/components/Textfield/index.d.ts",
+      "default": "./dist/components/Textfield/index.js"
+    }
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
