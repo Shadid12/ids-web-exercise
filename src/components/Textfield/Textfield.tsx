@@ -10,6 +10,7 @@ export type TextFieldProps = {
   error?: string;
   warning?: string;
   required?: boolean;
+  width?: 'normal' | 'wide';
 }
 
 const TextField: React.FC<TextFieldProps> = ({ 
@@ -20,7 +21,8 @@ const TextField: React.FC<TextFieldProps> = ({
   type = "text",
   error = "",
   warning = "",
-  required = false
+  required = false,
+  width = "normal",
 }) => {
   const [_isFocused, setIsFocused] = useState<boolean>(false);
   
@@ -31,7 +33,7 @@ const TextField: React.FC<TextFieldProps> = ({
   };
 
   return (
-    <div className={`text-field-container ${getStateClass()}`}>
+    <div className={`text-field-container ${getStateClass()}`} style={{ maxWidth: width == "normal" ? `300px` : '500px' }}>
       <label className="text-field-label">
         {label} {required && <span className="required-mark">*</span>}
       </label>
